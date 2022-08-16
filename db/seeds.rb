@@ -3,6 +3,9 @@ puts "Seeding..."
 Audition.destroy_all
 Role.destroy_all
 
+Audition.reset_pk_sequence
+Role.reset_pk_sequence
+
 ronald = Role.create(character_name: "Ronald McDonald")
 
 lucas = Audition.create(actor: "Lucas Duncan", location: "Texas", phone: 12345, hired: true, role: ronald)
